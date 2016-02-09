@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.css">
+        <link rel="stylesheet" type="text/css" href="css/index.css">  
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>
+        <script type="text/javascript" src="cordova.js"></script>         
+        <script type="text/javascript" src="js/index.js"></script>
+        <title>Movie Mania</title>
+    </head>
+    <body>
+		<div data-role="page" id="up-coming">            
+			<div data-role="panel" data-display="overlay" data-position="left" id="options">
+				<ul data-role="listview">
+					<li data-icon="delete"><a href="#" data-rel="close">Close</a></li>
+					<li data-role="list-divider"></li>
+					<li><a href="#" data-rel="close" class="up-coming">Up Coming Movies</a></li>
+					<li><a href="#" data-rel="close" class="popular-tv">Popular TV Shows</a></li>
+					<li><a href="#" data-rel="close" class="famous-celeb">Famous Celebrities</a></li>
+					<li><a href="#" data-rel="close" class="search">Search</a></li>
+				</ul>
+			</div>
+			<div data-role="header" data-position="fixed" role="banner" data-tap-toggle="false">
+				<h3>Movie Mania</h3>
+				<a href="#" class="ui-btn ui-shadow ui-btn-left ui-corner-all ui-icon-bars ui-btn-icon-notext open"></a>
+			</div>
+			<div data-role="main" class="content ui-content">
+				<h2>Up Coming Movies</h2>
+					<ul data-role="listview" data-inset="true" id="upComingList">
+						
+					</ul>				
+			</div>
+			<div data-role="footer" data-position="fixed" role="contentinfo" data-tap-toggle="false">
+				<h3>&copy; The Movie Club 2016</h3>
+			</div>
+		</div>
+  		
+   		<div data-role="page" id="popular-tv">            
+			<div data-role="panel" data-display="overlay" data-position="left" id="options">
+				<ul data-role="listview">
+					<li data-icon="delete"><a href="#" data-rel="close">Close</a></li>
+					<li data-role="list-divider"></li>
+					<li><a href="#" data-rel="close" class="up-coming">Up Coming Movies</a></li>
+					<li><a href="#" data-rel="close" class="popular-tv">Popular TV Shows</a></li>
+					<li><a href="#" data-rel="close" class="famous-celeb">Famous Celebrities</a></li>
+					<li><a href="#" data-rel="close" class="search">Search</a></li>
+				</ul>
+			</div>
+			<div data-role="header" data-position="fixed"  role="banner" data-tap-toggle="false">
+				<h3>Movie Mania</h3>
+				<a href="#" class="ui-btn ui-shadow ui-btn-left ui-corner-all ui-icon-bars ui-btn-icon-notext open"></a>
+			</div>
+			<div data-role="main" class="content ui-content">
+				<h2>Popular TV Series</h2>
+					<ul data-role="listview" data-inset="true" id="popularTvList">
+						
+					</ul>				
+			</div>
+			<div data-role="footer" data-position="fixed" role="contentinfo" data-tap-toggle="false">
+				<h3>&copy; The Movie Club 2016</h3>
+			</div>
+		</div>
+
+   		<div data-role="page" id="famous-celeb">            
+			<div data-role="panel" data-display="overlay" data-position="left" id="options">
+				<ul data-role="listview">
+					<li data-icon="delete"><a href="#" data-rel="close">Close</a></li>
+					<li data-role="list-divider"></li>
+					<li><a href="#" data-rel="close" class="up-coming">Up Coming Movies</a></li>
+					<li><a href="#" data-rel="close" class="popular-tv">Popular TV Shows</a></li>
+					<li><a href="#" data-rel="close" class="famous-celeb">Famous Celebrities</a></li>
+					<li><a href="#" data-rel="close" class="search">Search</a></li>
+				</ul>
+			</div>
+			<div data-role="header" data-position="fixed"  role="banner" data-tap-toggle="false">
+				<h3>Movie Mania</h3>
+				<a href="#" class="ui-btn ui-shadow ui-btn-left ui-corner-all ui-icon-bars ui-btn-icon-notext open"></a>
+			</div>
+			<div data-role="main" class="content ui-content">
+				<h2>Famous Celebrities</h2>
+					<ul data-role="listview" data-inset="true" id="famousCelebList">
+						
+					</ul>				
+			</div>
+			<div data-role="footer" data-position="fixed" role="contentinfo" data-tap-toggle="false">
+				<h3>&copy; The Movie Club 2016</h3>
+			</div>
+		</div>
+   		<div data-role="page" id="search">            
+			<div data-role="panel" data-display="overlay" data-position="left" id="options">
+				<ul data-role="listview">
+					<li data-icon="delete"><a href="#" data-rel="close">Close</a></li>
+					<li data-role="list-divider"></li>
+					<li><a href="#" data-rel="close" class="up-coming">Up Coming Movies</a></li>
+					<li><a href="#" data-rel="close" class="popular-tv">Popular TV Shows</a></li>
+					<li><a href="#" data-rel="close" class="famous-celeb">Famous Celebrities</a></li>
+					<li><a href="#" data-rel="close" class="search">Search</a></li>
+				</ul>
+			</div>
+			<div data-role="header" data-position="fixed" role="banner" data-tap-toggle="false">
+				<h3>Movie Mania</h3>
+				<a href="#" class="ui-btn ui-shadow ui-btn-left ui-corner-all ui-icon-bars ui-btn-icon-notext open"></a>
+			</div>
+			<div data-role="main" class="content ui-content">
+				<h2>Search</h2>
+
+					<select id="searchType" data-iconpos="bottom">
+						<option value="choose" selected>Choose Content</option>
+						<option value="movie" class="content">Movie</option>
+						<option value="tv" class="content">TV Show</option>
+						<option value="person" class="content">Celebrity</option>
+					</select>
+              		
+              		<input type="search" class="content" id="searchbox" placeholder="Type here">
+              		
+               		<button id="searchButton">Enter</button>
+					<ul data-role="listview" data-inset="true" id="searchList">
+
+					</ul>				
+			</div>
+			<div data-role="footer" data-position="fixed" role="contentinfo" data-tap-toggle="false">
+				<h3>&copy; The Movie Club 2016</h3>
+			</div>
+		</div>
+	</body>
+</html>
